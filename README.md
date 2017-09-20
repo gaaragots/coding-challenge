@@ -12,8 +12,10 @@ npm install
 ## Usage
 Enter in your preferred browser, the following address `localhost:3000`
 
-For testing purpose 
+For testing purpose:
+
 Login e-mail: `test@gmail.com`
+
 Password: `test`
 
 
@@ -27,7 +29,4 @@ Password: `test`
   * Node.js
 
 * Facebook API
-
-## Once you're done with the app 
-* Put the code of your project on Github and send us the URL of the repo via Email.
 
