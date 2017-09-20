@@ -6,6 +6,8 @@ The task is to implement a small Facebook-powered web app. The goal of the app i
 ## Installation
 The first step is using npm to install the packages, you can do this by running:
 ```shell
+git clone https://github.com/gaaragots/coding-challenge.git
+cd coding-challenge
 npm install
 ```
 
