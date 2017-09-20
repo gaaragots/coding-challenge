@@ -18,9 +18,9 @@ Then enter in your preferred browser the following address `localhost:3000`
 
 For testing purpose:
 
-	Login e-mail: `test@gmail.com`
+	* Login e-mail: `test@gmail.com`
 
-	Password: `test`
+	* Password: `test`
 
 
 ## Technologies used
