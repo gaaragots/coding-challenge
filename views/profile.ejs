@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Photos with Friends!</title>
+
+    <link rel="stylesheet" type="text/css" href="/semantic/semantic.css">
+
+    <style type="text/css">
+        body {
+            background-color: #FFFFFF;
+        }
+        
+        .ui.menu .item img.logo {
+            margin-right: 1.5em;
+        }
+        
+        .main.container {
+            margin-top: 7em;
+        }
+        
+        .wireframe {
+            margin-top: 2em;
+        }
+        
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            <a class="header item">
+                <i class="user icon"></i> <%= username %>
+            </a>
+            <a href="/logout" class="icon item right"><i class="power icon"></i></a>
+        </div>
+    </div>
+
+    <div class="ui main text container" id="fb-root">
+        <h1 class="ui header">Full-Stack Coding Challenge</h1>
+        <p>The task is to implement a small Facebook-powered web app. </p>
+        <p>The goal of the app is to let the user export his photos from Facebook.</p>
+
+        <p>
+            <button v-on:click="getPhotos" class="ui facebook button">
+                <i class="facebook icon"></i> Link &amp; get photos
+            </button>
+        </p>
+        <p>
+            <button v-on:click="facebookLogout" class="ui black button">
+                <i class="facebook icon"></i> Logout
+            </button>
+        </p>
+
+        <div class="ui small images" style="min-height: 150px;">
+            <div v-if="showLoader" class="ui segment" style="min-height: 150px;">
+                <div class="ui active dimmer">
+                    <div class="ui indeterminate text loader">Preparing Files</div>
+                </div>
+                <p></p>
+            </div>
+
+            <my-pic 
+                    v-for="picture in pictures" 
+                    v-bind:pic="picture" 
+                    v-bind:key="picture.id">
+            </my-pic>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script id="facebook-jssdk" async="" src="http://connect.facebook.net/en_US/all.js"></script>
+    <script src="/javascripts/vue.min.js"></script>
+    <script src="/javascripts/script.js"></script>
+
+</body>
+
+</html>

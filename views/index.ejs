@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/semantic/semantic.css">
+</head>
+
+<body>
+
+    <div class="ui container" style="margin-top: 150px;">
+        <div class="ui two column middle aligned very relaxed stackable grid">
+            <div class="column">
+                <form action="/login" method="post" class="ui form">
+                    <div class="field">
+                        <label>E-mail</label>
+                        <div class="ui left icon input">
+                            <input required="required" type="email" name="email" placeholder="E-mail">
+                            <i class="mail icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="ui left icon input">
+                            <input required="required" type="password" name="password" placeholder="password" />
+                            <i class="lock icon"></i>
+                        </div>
+                    </div>
+                    <button class="ui blue submit button" type="submit">Login</button>
+                </form>
+            </div>
+
+            <div class="ui vertical divider">
+                Or
+            </div>
+
+            <div class="column">
+                <form action="/register" method="post" class="ui form">
+                    <div class="field">
+                        <label>Username</label>
+                        <div class="ui left icon input">
+                            <input required="required" type="text" placeholder="Username" name="username">
+                            <i class="user icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>E-mail</label>
+                        <div class="ui left icon input">
+                            <input required="required" type="email" name="email">
+                            <i class="mail icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="ui left icon input">
+                            <input required="required" type="password" name="password">
+                            <i class="lock icon"></i>
+                        </div>
+                    </div>
+                    <button class="ui blue submit button" type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/semantic/semantic.js"></script>
+</body>
+
+</html>
